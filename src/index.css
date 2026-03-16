@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-base-950 font-body text-white antialiased;
+    margin: 0;
+  }
+
+  * {
+    @apply border-slate-700;
+  }
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto max-w-7xl scroll-mt-28 px-6 py-16 md:px-10 md:py-20;
+  }
+
+  .btn-primary {
+    @apply rounded-xl bg-cyan-400 px-5 py-3 font-semibold text-slate-950 transition hover:bg-cyan-300;
+  }
+
+  .btn-secondary {
+    @apply rounded-xl border border-cyan-400/50 px-5 py-3 font-semibold text-cyan-200 transition hover:border-cyan-300 hover:bg-cyan-400/10;
+  }
+
+  .btn-tertiary {
+    @apply rounded-lg border border-cyan-400/30 px-4 py-2 text-sm text-cyan-100 transition hover:border-cyan-300 hover:bg-cyan-400/10;
+  }
+
+  .nav-link {
+    @apply transition hover:text-cyan-200;
+  }
+
+  .social-link {
+    @apply rounded-full border border-cyan-400/30 p-2 text-cyan-200 transition hover:border-cyan-300 hover:bg-cyan-400/10;
+  }
+
+  .contact-link {
+    @apply w-full rounded-xl border border-cyan-400/30 bg-slate-950/60 px-4 py-3 text-slate-100 transition hover:border-cyan-300;
+  }
+
+  .btn-nav-action {
+    @apply rounded-lg border border-cyan-400/35 px-3 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-cyan-100 transition hover:bg-cyan-400/10 disabled:cursor-not-allowed disabled:opacity-70;
+  }
+}
